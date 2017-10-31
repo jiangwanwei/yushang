@@ -1,0 +1,79 @@
+
+.bg1 {background: #000;}
+.bg2 {background: #d8d8d8;}
+/*========= loading ===========*/
+.loading {
+	height: 100vh;
+	background: url(../images/page1-1.png) no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.loading > img {
+	width: 100%;
+	position: absolute;
+	top: 33%;
+	display: none;
+}
+
+/*========= swiper ===========*/
+.swiper-container {
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	width: 100%;
+	height: 100vh;
+}
+
+.swiper-slide {
+	background-size: cover!important;
+	background-repeat: no-repeat!important;
+}
+.logo {
+	position: absolute;
+	width: 100%;
+	top: 3%;
+	z-index: 555;
+}
+
+
+/*========= form ===========*/
+.form {
+	height: 100vh;
+}
+
+.form > .img1 {
+	width: 100%;
+	position: absolute;
+	top: 27%;
+}
+
+.form > textarea {
+	position: absolute;
+	border: none;
+	left: 7%;
+	width: 81%;
+	height: 22%;
+	padding: 0 2%;
+	bottom: 100px;
+	background: none;
+	outline: 2px solid #111111;
+	font-size: 16px;
+}
+
+.form > button {
+	position: absolute;
+	border: 1px solid #111111;
+	background: none;
+	width: 50%;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+	color: #111111;
+	bottom: 30px;
+	left: 25%;
+	padding: 0;
+	outline: none;
+}
+
+
+
