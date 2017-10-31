@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// loading 效果
-	imgLoad(['./images/page2-logo.png', './images/page1-1.png', './images/page1-2.png'])
+	imgLoad(['/yushang/images/page2-logo.png', '/yushang/images/page1-1.png', '/yushang/images/page1-2.png'])
 	.done(function(){
 		$('#loading_p').remove();
 		setTimeout(function(){
