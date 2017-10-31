@@ -1,31 +1,36 @@
 $(document).ready(function() {
 	// loading 效果
-	imgLoad(['../images/page2-logo.png', '../images/page1-1.png', '../images/page1-2.png'])
+	imgLoad(['./images/page2-logo.png', './images/page1-1.png', './images/page1-2.png'])
 	.done(function(){
+		$('#loading_p').remove();
 		setTimeout(function(){
 			$('#loading-txt').fadeIn('slow', function() {
 				var loading = $('#loading');
-				loading.delay(1300).fadeOut('500', function() {
+				loading.delay(1300).slideUp('slow', function() {
+
 					$(this).remove();
 
-					var slide = $('.swiper-slide').length - 1;
+					$('#swiper_main').fadeIn('slow', function() {
+						var slide = $('.swiper-slide').length - 1;
 
-					// swiper
-					var mySwiper = new Swiper ('.swiper-container', {
-					    direction: 'horizontal',
-					    // loop: true,
+						// swiper
+						var mySwiper = new Swiper ('.swiper-container', {
+						    direction: 'horizontal',
+						    // loop: true,
 
-					    autoplay: 6000,
+						    autoplay: 7000,
 
-					    speed: 300,
-					    
-					    // // 如果需要前进后退按钮
-					    // nextButton: '.swiper-button-next1',
-					    // prevButton: '.swiper-button-prev1',
-					    onTouchEnd: function(swiper){
-					    	if (swiper.activeIndex === slide) location = './form.html'
-					    }
-					}) 
+						    speed: 300,
+						    
+						    // // 如果需要前进后退按钮
+						    // nextButton: '.swiper-button-next1',
+						    // prevButton: '.swiper-button-prev1',
+						    onTouchEnd: function(swiper){
+						    	if (swiper.activeIndex === slide) location = './form.html'
+						    }
+						}) 
+					});
+					
 				});
 			});
 		}, 100)	
