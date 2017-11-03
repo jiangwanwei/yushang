@@ -7,7 +7,6 @@ $(document).ready(function() {
 			$('#loading-txt').fadeIn('slow', function() {
 				var loading = $('#loading');
 				loading.delay(1300).slideUp('slow', function() {
-
 					$(this).remove();
 
 					$('#swiper_main').fadeIn('slow', function() {
@@ -18,6 +17,7 @@ $(document).ready(function() {
 						    direction: 'horizontal',
 						    loop: true,
 						    pagination : '.swiper-pagination',
+
 						    autoplay: 7000,
 
 						    speed: 300,
