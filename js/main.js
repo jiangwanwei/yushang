@@ -16,8 +16,8 @@ $(document).ready(function() {
 						// swiper
 						var mySwiper = new Swiper ('.swiper-container', {
 						    direction: 'horizontal',
-						    // loop: true,
-
+						    loop: true,
+						    pagination : '.swiper-pagination',
 						    autoplay: 7000,
 
 						    speed: 300,
@@ -25,9 +25,9 @@ $(document).ready(function() {
 						    // // 如果需要前进后退按钮
 						    // nextButton: '.swiper-button-next1',
 						    // prevButton: '.swiper-button-prev1',
-						    onTouchEnd: function(swiper){
-						    	if (swiper.activeIndex === slide) location = './form.html'
-						    }
+						    // onTouchEnd: function(swiper){
+						    // 	if (swiper.activeIndex === slide) location = './form.html'
+						    // }
 						}) 
 					});
 					
@@ -35,6 +35,25 @@ $(document).ready(function() {
 			});
 		}, 100)	
 	})	
+
+	// rule
+	var rule_panel = $('#rule_panel');
+	$('#rule_btn').click(function(event) {
+		/* Act on the event */
+		rule_panel.addClass('show');
+	});
+	rule_panel.click(function(){
+		$(this).removeClass('show')
+	})
+
+	// input
+	var input = $('#my_msg');
+	// input.keyup(function(event) {
+	// 	/* Act on the event */
+	// 	if ($(this).val().length > 0) {
+	// 		$(this).css('background', '#ccc');
+	// 	}
+	// });
 });
 
 // 图片加载
